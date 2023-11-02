@@ -19,7 +19,10 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const {
-    username, password, error, isLoading,
+    username,
+    password,
+    error,
+    isLoading,
   } = useSelector(getLoginState);
 
   const onChangeUsername = useCallback(
@@ -43,7 +46,12 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
   return (
     <div className={classNames(cls.LoginForm, {}, [className])}>
       <Text title={t('Форма авторизации')} />
-      {error && (<Text text={error} theme={TextTheme.ERROR} />)}
+      {error && (
+        <Text
+          text={t('Вы ввели неправильный логин или пароль')}
+          theme={TextTheme.ERROR}
+        />
+      )}
       <Input
         className={classNames(cls.input)}
         type="text"
