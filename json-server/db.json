@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Толя",
+    "lastname": "Фам",
+    "age": 28,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://static10.tgstat.ru/channels/_0/2a/2a39a2514814cb8f156a0b595744c835.jpg"
+  }
 }
