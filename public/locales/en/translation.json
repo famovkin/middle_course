@@ -12,5 +12,6 @@
   "Введите логин": "Username",
   "Введите пароль": "Password",
   "Войти": "Login",
-  "Форма авторизации": "Authorization"
+  "Форма авторизации": "Authorization",
+  "Профиль": "Profile"
 }
