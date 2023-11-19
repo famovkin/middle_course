@@ -48,6 +48,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
     'no-param-reassign': 'off',
     'no-autofocus': 'off',
+    'no-undef': 'off',
   },
   settings: {
     react: {

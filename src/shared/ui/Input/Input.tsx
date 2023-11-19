@@ -41,7 +41,7 @@ export const Input = memo((props: InputProps) => {
   useEffect(() => {
     if (autofocus) {
       setIsFocused(true);
-      ref.current.focus();
+      ref.current?.focus();
     }
   }, [autofocus]);
 
@@ -72,7 +72,7 @@ export const Input = memo((props: InputProps) => {
           onFocus={onFocus}
           onBlur={onBlur}
           onSelect={onSelect}
-          ref={ref}
+          ref={ref as React.RefObject<HTMLInputElement>}
           {...otherProps}
         />
         {isFocused && (
