@@ -1,5 +1,3 @@
-import { Profile } from 'entities/Profile/model/types/profile';
-
 export enum Currency {
   'RUB' = 'RUB',
   'EUR' = 'EUR',
