@@ -12,7 +12,12 @@ import { BuildOptions } from './types/config';
 export default function buildPlugins(
   options: BuildOptions,
 ): WebpackPluginInstance[] {
-  const { paths, isDev, apiUrl } = options;
+  const {
+    paths,
+    isDev,
+    apiUrl,
+    project,
+  } = options;
 
   const plugins = [
     new HtmlWebpackPlugin({
@@ -26,6 +31,7 @@ export default function buildPlugins(
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
       __API__: JSON.stringify(apiUrl),
+      __PROJECT__: JSON.stringify(project),
     }),
   ];
 
