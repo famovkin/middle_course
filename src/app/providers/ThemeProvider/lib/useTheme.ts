@@ -14,15 +14,32 @@ export const useTheme = (): useThemeResult => {
   }, [theme]);
 
   const toggleTheme = () => {
-    const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
-    console.log(newTheme);
+    // const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
+    let newTheme: Theme;
+    // const newTheme = Theme.YELLOW;
+
+    switch (theme) {
+    case Theme.DARK:
+      newTheme = Theme.LIGHT;
+      break;
+    case Theme.LIGHT:
+      newTheme = Theme.YELLOW;
+      break;
+    case Theme.YELLOW:
+      newTheme = Theme.DARK;
+      break;
+    default:
+      newTheme = Theme.LIGHT;
+    }
+
+    console.log('newTheme:', newTheme);
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     setTheme?.(newTheme);
     document.body.className = newTheme;
   };
 
   return {
-    theme: theme || Theme.LIGHT,
+    theme: theme || Theme.YELLOW,
     toggleTheme,
   };
 };
