@@ -44,6 +44,11 @@ export default {
     __PROJECT__: 'jest',
   },
 
+  // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
+  testPathIgnorePatterns: [
+    '.fttemplates/**',
+  ],
+
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -152,11 +157,6 @@ export default {
 
   // Adds a location field to test results
   // testLocationInResults: false,
-
-  // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  // testPathIgnorePatterns: [
-  //   "/node_modules/"
-  // ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
