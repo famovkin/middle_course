@@ -7,6 +7,7 @@ import {
   HotModuleReplacementPlugin,
 } from 'webpack';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BuildOptions } from './types/config';
 
 export default function buildPlugins(
@@ -36,6 +37,7 @@ export default function buildPlugins(
   ];
 
   if (isDev) {
+    plugins.push(new ReactRefreshWebpackPlugin());
     plugins.push(new HotModuleReplacementPlugin());
     plugins.push(
       new BundleAnalyzerPlugin({
