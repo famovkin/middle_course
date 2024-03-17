@@ -7,7 +7,7 @@ interface [FTName]Props {
   className?: string;
 }
 
-export const [FTName] = (props: ButtonProps) => {
+export const [FTName] = (props: [FTName]Props) => {
   const { className } = props;
   const { t } = useTranslation();
 
