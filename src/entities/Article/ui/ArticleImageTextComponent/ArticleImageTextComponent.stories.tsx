@@ -2,16 +2,16 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { [FTName] } from './[FTName]';
+import { ArticleImageTextComponent } from './ArticleImageTextComponent';
 
-const meta: Meta<typeof [FTName]> = {
-  title: 'category/[FTName]',
-  component: [FTName],
+const meta: Meta<typeof ArticleImageTextComponent> = {
+  title: 'category/ArticleImageTextComponent',
+  component: ArticleImageTextComponent,
   args: {},
 };
 
 export default meta;
-type Story = StoryObj<typeof [FTName]>;
+type Story = StoryObj<typeof ArticleImageTextComponent>;
 
 export const Primary: Story = {
   args: {},
