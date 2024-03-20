@@ -14,7 +14,9 @@ interface ArticlesDetailsPageProps {
 const ArticlesDetailsPage = (props: ArticlesDetailsPageProps) => {
   const { className } = props;
   const { t } = useTranslation('articles');
-  const { id } = useParams<{ id: string }>();
+  let { id } = useParams<{ id: string }>();
+
+  if (__PROJECT__ === 'storybook') id = '1';
 
   if (!id) {
     return (
