@@ -12,6 +12,7 @@ import { LoginSchema } from 'features/AuthByUsername';
 import { ArticleDetailsSchema } from 'entities/Article';
 import { Dispatch } from 'redux';
 import { NavigateOptions, To } from 'react-router-dom';
+import { ArticlesDetailsCommentsSchema } from 'pages/ArticlesDetailsPage';
 
 export interface StateSchema {
   counter: CounterSchema;
@@ -21,6 +22,7 @@ export interface StateSchema {
   loginForm?: LoginSchema;
   profile?: ProfileSchema;
   articleDetails?: ArticleDetailsSchema;
+  articleDetailsComments?: ArticlesDetailsCommentsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
