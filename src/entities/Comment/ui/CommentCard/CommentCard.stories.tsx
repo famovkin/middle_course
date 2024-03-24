@@ -5,7 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { CommentCard } from './CommentCard';
 
 const meta: Meta<typeof CommentCard> = {
-  title: 'category/CommentCard',
+  title: 'entities/Comment/CommentCard',
   component: CommentCard,
   args: {},
 };
@@ -14,10 +14,22 @@ export default meta;
 type Story = StoryObj<typeof CommentCard>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    comment: {
+      id: '1',
+      text: 'Hello, world!',
+      user: {
+        id: '1',
+        username: 'Vasya',
+        avatar:
+          'https://static10.tgstat.ru/channels/_0/2a/2a39a2514814cb8f156a0b595744c835.jpg',
+      },
+    },
+  },
 };
 
-export const Dark: Story = {
-  args: {},
+export const Loading: Story = {
+  args: {
+    isLoading: true,
+  },
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)];

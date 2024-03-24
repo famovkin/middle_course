@@ -13,6 +13,7 @@ import { ArticleDetailsSchema } from 'entities/Article';
 import { Dispatch } from 'redux';
 import { NavigateOptions, To } from 'react-router-dom';
 import { ArticlesDetailsCommentsSchema } from 'pages/ArticlesDetailsPage';
+import { AddCommentFormSchema } from 'features/AddCommentForm';
 
 export interface StateSchema {
   counter: CounterSchema;
@@ -23,6 +24,7 @@ export interface StateSchema {
   profile?: ProfileSchema;
   articleDetails?: ArticleDetailsSchema;
   articleDetailsComments?: ArticlesDetailsCommentsSchema;
+  addCommentForm?: AddCommentFormSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

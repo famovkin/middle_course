@@ -5,7 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { CommentList } from './CommentList';
 
 const meta: Meta<typeof CommentList> = {
-  title: 'category/CommentList',
+  title: 'entities/Comment/CommentList',
   component: CommentList,
   args: {},
 };
@@ -14,10 +14,34 @@ export default meta;
 type Story = StoryObj<typeof CommentList>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    comments: [
+      {
+        id: '1',
+        text: 'Hello, world!',
+        user: {
+          id: '1',
+          username: 'Vasya',
+          avatar:
+            'https://static10.tgstat.ru/channels/_0/2a/2a39a2514814cb8f156a0b595744c835.jpg',
+        },
+      },
+      {
+        id: '2',
+        text: 'Foo',
+        user: {
+          id: '2',
+          username: 'Petya',
+          avatar:
+            'https://static10.tgstat.ru/channels/_0/2a/2a39a2514814cb8f156a0b595744c835.jpg',
+        },
+      },
+    ],
+  },
 };
 
-export const Dark: Story = {
-  args: {},
+export const Loading: Story = {
+  args: {
+    isLoading: true,
+  },
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
