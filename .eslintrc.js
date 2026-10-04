@@ -15,10 +15,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
-    'react/jsx-filename-extension': [
-      2,
-      { extensions: ['.js', '.jsx', '.tsx'] },
-    ],
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'warn',
@@ -30,13 +27,25 @@ module.exports = {
     'import/extensions': 'off',
     'no-underscore-dangle': 'off',
     'no-shadow': 'off',
-    'i18next/no-literal-string': ['error', {
-      markupOnly: true,
-    }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['data-testid'],
+      },
+    ],
     'max-len': ['error', { ignoreComments: true, code: 100 }],
   },
   globals: {
     React: true,
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 };
