@@ -4,10 +4,10 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 
 import AboutPage from './AboutPage';
 
-const meta = {
+const meta: Meta<typeof AboutPage> = {
   title: 'pages/AboutPage',
   component: AboutPage,
-} satisfies Meta<typeof AboutPage>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

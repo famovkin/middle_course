@@ -4,10 +4,10 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 
 import { ThemeSwitcher } from './ThemeSwitcher';
 
-const meta = {
+const meta: Meta<typeof ThemeSwitcher> = {
   title: 'shared/ThemeSwitcher',
   component: ThemeSwitcher,
-} satisfies Meta<typeof ThemeSwitcher>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -4,10 +4,10 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 
 import { Navbar } from './Navbar';
 
-const meta = {
+const meta: Meta<typeof Navbar> = {
   title: 'widget/Navbar',
   component: Navbar,
-} satisfies Meta<typeof Navbar>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

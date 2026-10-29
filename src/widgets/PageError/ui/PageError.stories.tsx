@@ -4,10 +4,10 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 
 import { PageError } from './PageError';
 
-const meta = {
+const meta: Meta<typeof PageError> = {
   title: 'widget/PageError',
   component: PageError,
-} satisfies Meta<typeof PageError>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

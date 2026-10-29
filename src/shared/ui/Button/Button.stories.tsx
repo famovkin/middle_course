@@ -4,13 +4,13 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 
 import { Button, ThemeButton } from './Button';
 
-const meta = {
+const meta: Meta<typeof Button> = {
   title: 'shared/Button',
   component: Button,
   args: {
     children: 'Text',
   },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

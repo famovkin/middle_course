@@ -4,10 +4,10 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 
 import { Sidebar } from './Sidebar';
 
-const meta = {
+const meta: Meta<typeof Sidebar> = {
   title: 'widget/Sidebar',
   component: Sidebar,
-} satisfies Meta<typeof Sidebar>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

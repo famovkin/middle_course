@@ -4,10 +4,10 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 
 import { Loader } from './Loader';
 
-const meta = {
+const meta: Meta<typeof Loader> = {
   title: 'shared/Loader',
   component: Loader,
-} satisfies Meta<typeof Loader>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

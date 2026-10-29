@@ -1,5 +1,6 @@
+/* eslint-disable no-param-reassign */
 import path from 'path';
-import webpack, { RuleSetRule, ModuleOptions } from 'webpack';
+import webpack from 'webpack';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPaths } from '../build/types/config';
 

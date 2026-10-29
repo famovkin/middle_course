@@ -3,9 +3,8 @@ import { Theme } from 'app/providers/ThemeProvider';
 
 import 'app/styles/index.scss';
 
-export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) =>
-  (
-    <div className={`app ${theme}`}>
-      <StoryComponent />
-    </div>
-  );
+export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => (
+  <div className={`app ${theme}`}>
+    <StoryComponent />
+  </div>
+);

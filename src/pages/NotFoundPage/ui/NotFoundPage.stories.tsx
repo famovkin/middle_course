@@ -4,10 +4,10 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 
 import { NotFoundPage } from './NotFoundPage';
 
-const meta = {
+const meta: Meta<typeof NotFoundPage> = {
   title: 'pages/NotFoundPage',
   component: NotFoundPage,
-} satisfies Meta<typeof NotFoundPage>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
